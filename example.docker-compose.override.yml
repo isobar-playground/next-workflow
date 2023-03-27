@@ -1,0 +1,9 @@
+version: "3"
+services:
+  nextjs:
+    volumes:
+      - .:/app
+    environment:
+      - NODE_ENV=development
+    user: node
+    command: ['npm', 'run', 'dev']

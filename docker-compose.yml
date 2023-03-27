@@ -1,0 +1,17 @@
+version: '3.7'
+
+services:
+  nextjs:
+    container_name: '${PROJECT_NAME}_nextjs'
+    build:
+      dockerfile: Dockerfile
+    networks:
+      - api
+    labels:
+      - 'traefik.http.routers.${PROJECT_NAME}_nextjs.rule=Host(`${PROJECT_BASE_URL}`)'
+      - 'traefik.http.services.${PROJECT_NAME}_nextjs.loadbalancer.server.port=3000'
+
+networks:
+  api:
+    name: drupal-workflow_default
+    external: true
