@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "types": "cd schemas && json2ts -i '*.json' -o ../types/schemas/"
+    "types": "json2ts -i 'schemas/*.json' -o ./src/types/schemas/"
   },
   "dependencies": {
     "@gdwc/drupal-state": "^4.2.0",
