@@ -9,6 +9,6 @@ export const Drupal = new DrupalState({
 })
 export const DrupalJsonApiParams = () => {
     const DrupalJsonApiParams = new BaseDrupalJsonApiParams();
-    DrupalJsonApiParams.addCustomParam({resourceVersion: 'rel:' + process.env.RESOURCE_VERSION});
+    DrupalJsonApiParams.addCustomParam({resourceVersion: 'rel:' + ResourceVersion});
     return DrupalJsonApiParams
 };
