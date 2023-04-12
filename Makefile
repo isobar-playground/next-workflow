@@ -18,7 +18,7 @@ up:
 
 ## build	:	Build containers and install npm dependencies.
 build:
-	@docker-compose --env-file .env --env-file .env.local build nextjs
+	@docker-compose --env-file .env --env-file .env.local build --no-cache nextjs
 
 ## shell	:	Access `nextjs` container via shell.
 ##		You can optionally pass an argument with a service name to open a shell on the specified container
