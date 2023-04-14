@@ -29,6 +29,11 @@ export default async function Home() {
                     )
                 })}
             </ul>
+            <p>
+                <Link href="http://workflow.localhost">Local Environment</Link><br/>
+                <Link href="https://staging-next.iso-playground.ovh">Staging Environment</Link><br/>
+                <Link href="https://production-next.iso-playground.ovh">Production Environment</Link>
+            </p>
         </>
     )
 }
